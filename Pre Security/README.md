@@ -167,3 +167,58 @@ Status codes can be broken down into 5 different ranges:
 | 404 - Page Not Found | The page/resource you have requested does not exist. |
 | 500 - Internal Service Error | The server doesn't know how to handle properly some kind of error in request. |
 | 503 - Service Unavailable | The server is either overloaded or down for maintenance. |
+## Headers
+Headers are additional bits of data you can send to the web server when making requests.
+
+**Common Request Headers** (from the client to the server)
+- **Host**: Telling the web server which website is being requested.
+- **User-Agent**: This is our browser software and version number.
+- **Content-Length**: Telling the web server how much data expect in the request.
+- **Accept-Encoding**: Telling the web server what types of compression methods the browser supports.
+- **Cookie**: Data sent to the server to help remember our information.
+
+**Common Response Headers** (from the server to the client after a request)
+- **Set-cookie**: Info to store which gets sent back to the web server on each request.
+- **Cache-Control**: How long to store the content of the response in the browser's cache before it is requested again.
+- **Content-Type**: Telling the client what type of data is being returned, i.e., HTML, CSS, Images, etc.
+- **Content-Encoding**: What method has been used to compress the data to make it smaller.
+## Cookies
+![images](ex11.png)
+
+Cookies can be used for many purposes but are most commonly used for website authentication. The cookie value is often a token (unique secret code that isn't easily humanly guessable).
+# How Websites Work
+![images](ex12.png)
+
+There are two major components that make up a mistake:
+1. Front End (Client-Side) - the way your browser renders a website.
+2. Back End (Server-Side) - a server that processes your request and returns a response.
+
+## HTML
+HyperText Markup Language (HTML) is the language websites are written in. Elements (also known as tags) are the building blocks of HTML pages and tells the browser how to display content.
+
+![images](ex13.png)
+## JavaScript
+JavaScript (JS) is used to control the functionality of web pages - without JS, a page would not have interactive elements and would always be static.
+
+```java
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TryHackMe Editor</title>
+    </head>
+    <body>
+        <div id="demo">Hi there!</div>
+         <button onclick='document.getElementById("demo").innerHTML = "Button Clicked";'>Click Me!</button>
+        <script type="text/javascript">
+            document.getElementById("demo").innerHTML = "Hack the Planet";
+        </script>
+    </body>
+</html>
+```
+## Sensitive Data Exposure
+Sensitive Data Exposure occurs when a website doesn't properly protect (or remove) sensitive clear-text information to the end-user; usually found in a site's frontend source code.
+## HTML Injection
+![images](ex14.png)
+
+When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
+
