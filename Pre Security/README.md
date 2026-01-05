@@ -91,3 +91,79 @@ Subdomain sits on the left-hand side of the SLD using a period to separate it, i
 **NOTE**: DNS records all come with a TTL (Time To Live) value, which is a number represents in seconds that the response should be saved for locally until we have to look it up again. Caching saves on having to make a DNS request everytime we communicate with a server.
 
 # HTTP in Detail
+
+HTTP (HyperText Transfer Protocol) is what's used whenever you view a website. It is the set of rules used for communicating with web server for the transmitting of webpage data, whether that is HTML, Images, Videos, etc.
+
+HTTPS (HTTP Secure) is the secure version of HTTP. Its data is encrypted in order to stopping people from seeing our data and also giving the assurances that we are taking the correct web server and not something impersonating it.
+
+## URL (Uniform Resource Locator)
+A URL is predominantly an instruction on how to access a resource on the internet.
+
+![images](ex9.png)
+
+**Making a Request**: It's possible to make a request to a web server with just one line **GET / HTTP/1.1**
+
+![images](ex10.png)
+
+**Example Request:**
+```text
+GET / HTTP/1.1
+
+Host: tryhackme.com
+User-Agent: Mozilla/5.0 Firefox/87.0
+Referer: https://tryhackme.com/
+```
+Note: HTTP requests always end with a blank line to inform the web server that the request has finished.
+
+**Example Response:**
+```text
+HTTP/1.1 200 OK
+
+Server: nginx/1.15.8
+Date: Fri, 09 Apr 2021 13:34:03 GMT
+Content-Type: text/html
+Content-Length: 98
+
+
+<html>
+<head>
+    <title>TryHackMe</title>
+</head>
+<body>
+    Welcome To TryHackMe.com
+</body>
+</html>
+```
+
+## HTTP Methods
+HTTP methods are a way for the client to show their intended action when making an HTTP request. For example, some HTTP methods commonly are:
+- **GET Request**: getting information from a web server.
+- **POST Request**: submitting data to the web server and potentially creating new records.
+- **PUT Request**: submitting data to a web server to update information.
+- **DELETE Request**: deleting information/records from a web server.
+
+## HTTP Status Codes
+Status codes can be broken down into 5 different ranges:
+
+| Status code range   | Description |
+| ------------------- | ----------- |
+| 100-199 - Information Response | The first part of request has been accepted and we should continue sending the rest of the request. These codes are no longer very common. |
+| 200-299 - Success       | Telling the client their request was successful |
+| 300-399 - Redirection   | Redirecting the client's request to another resource. |
+| 400-499 - Client Errors | Alerting the client that there was an error in request. |
+| 500-599 - Server Errors | Reversing for errors happening on the server-side. |
+
+## Common HTTP Status Codes
+| Status code     | Description   |
+| --------------- | ------------ |
+| 200 - OK | The request was completed successfully. |
+| 201 - Created | A resource has been created. |
+| 301 - Moved Permanently | Redirecting the client's browser to a new webpage. |
+| 302 - Found | Similar to the above code, but this is only a temporary change. |
+| 400 - Bad Request | The request has something wrong or missing. |
+| 401 - Not Authorised | Must have authorised with the web application to view this resource.
+| 403 - Forbidden | Whether logged in or not, you don't have permission to view this resource.
+| 405 - Method Not Allowed | The resource does not allow this method request. |
+| 404 - Page Not Found | The page/resource you have requested does not exist. |
+| 500 - Internal Service Error | The server doesn't know how to handle properly some kind of error in request. |
+| 503 - Service Unavailable | The server is either overloaded or down for maintenance. |
