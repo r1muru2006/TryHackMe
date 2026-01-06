@@ -222,3 +222,47 @@ Sensitive Data Exposure occurs when a website doesn't properly protect (or remov
 
 When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
 
+# Putting it all together
+![images](ex15.png)
+
+When we request a website, our computer uses DNS to know the server's IP address. Then it talks to the web server using HTTP protocol; the webserver then returns HTML, JS, CSS, Images, etc., which our browser then uses to correctly format and display the website to you.
+
+## Other components
+
+**Load Balancers**
+![images](ex16.png)
+
+Providing two main features, ensuring high traffic websites can handle the load and providing a failover if a server becomes unresponsive.
+
+First, the load balancer receive your request, forward it to one of the multiple servers behind it. It uses different algos to decide which server is the best, i.e. **round-robin**, which sends it to each server in turn, or **weighted**.
+
+Load balancers also perform periodic checks with each server to ensure they are running correctly, which is called a **health check**.
+
+**CDN (Content Delivery Networks)**
+
+A CDN allows hosting static files from your website. When a user requests one of the hosted files, the CDN works out where the nearest server is physically located and send it there.
+
+**Databases**
+
+Databases can range from just a simple plain text file up to complex clusters of multiple servers providing speed and resilience.
+
+**WAF (Web Application Firewall)**
+
+A WAF sits between your web request and the web server, protect the webserver from hacking or denial of service attacks. If a request is deemed a potential attack, it will be dropped and never be sent to the webserver.
+![images](ex17.png)
+## How Web Servers Work
+A web server is a software that listens for incoming connections and then utilises the HTTP protocol to deliver web content to its clients, i.e. Apache, Nginx, IIS, NodeJS, etc.
+
+Web servers can host multiple websites with different domain names; to achieve this, they use **virtual hosts**. There's no limit to the number of different websites you can host on a webserver.
+
+**Static content** is content that never changes, i.e. pictures, javascript, CSS, etc. **Dynamic content**, on the other hand, is content that could change with different requests, i.e. a blog. On the homepage, it show you the latest entries, so if a new entry is created, the homepage is the updated with the latest entry.
+
+These changes are done in what is called the **Backend** because what is being done is all done behind the scenes. Everything you see in your browser is called the **Frontend**.
+
+**Scripting and Backend Languages**
+
+Some examples of these languages are PHP, Python, Ruby, NodeJS, Perl and many more. They can interact with databases, call external services, process data from the user, and so much more. This interactivity opens up a lot more security issues for web applications that haven't been created securely.
+
+## Summary the order of how a request to a website works
+
+![images](ex18.png)
