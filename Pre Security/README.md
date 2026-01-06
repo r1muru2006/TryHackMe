@@ -17,7 +17,7 @@ I know the learning path leads to each careers related to security.
 - To communicate and maintain order, devices must be both identifying and identifiable on a network. Therefore, each device uses: IP Address and a Media Access Control (MAC) Address -- like serial number.
 ## IP Addresses
 
-![images](ex4.png)
+![images](data/ex4.png)
 
 A public address is used to identify the device on the Internet, whereas a private address is used to identify a device amongst other devices. Here we have two devices on a private network:
 
@@ -28,25 +28,25 @@ A public address is used to identify the device on the Internet, whereas a priva
 | CMNatic-PC      | 192.168.1.74 | Private         |
 | CMNatic-PC      | 86.157.52.21 | Public          |
 
-![images](ex1.png)
+![images](data/ex1.png)
 
 These two devices use their private IP addresses to communicate with each others, while any data sent to the Internet will be identified by the same public IP address.
 Public IP address are given by our Internet Service Provider (or ISP) at a monthly fee (our bill!!!)
 
-![images](ex2.png)
+![images](data/ex2.png)
 
 One version of the Internet Protocol addressing scheme known as IPv4, which can go up to $2^{32}$ IP addresses (4.29 billion) -- too small to satisfy the needs.
 
 IPv6 is a new iteration to help tackle this issue: supports up to $2^{128}$ of IP addresses and more efficient due to new metholodogies.
 
-![images](ex3.png)
+![images](data/ex3.png)
 
 ## MAC Addresses
 All devices have a physical network interface, which is a microchip board found on the device's motherboard. This network interface is assigned a unique address factory it was built at, called a MAC (Media Access Control) address.
 
 The MAC Address is a twelve-char hex number split into two's and separated by a colon which is considered separators. The first six chars represents the company that made the network interface, and the last six is a unique number.
 
-![images](ex5.png)
+![images](data/ex5.png)
 
 However, an interacting things with MAC addresses is that they can be faked or 'spoofed' in a process known as spoofing.
 
@@ -57,7 +57,7 @@ Ping uses ICMP (Internet Control Message Protocol) packets to determine the perf
 
 The syntax to do a simple ping is: `ping IP address or website URL`.
 
-![images](ex6.png)
+![images](data/ex6.png)
 
 Here we are pinging a device that has the private address of 192.168.1.254. Ping informs us that we have sent six ICMP packets, all of which were received with an average time of 4.16 miliseconds. 
 
@@ -65,7 +65,7 @@ Here we are pinging a device that has the private address of 192.168.1.254. Ping
 DNS (Domain Name System) provides a simple way to communicate with devices on the Internet without remember complexing numbers, which is IP addresses. So instead of remembering 132.12.13.109, you can remember [r1muru2006.github.io](https://r1muru2006.github.io/) instead.
 
 ## Domain Hierarchy
-![images](ex7.png)
+![images](data/ex7.png)
 TLD (Top-Level Domain) includes gTLD (Generic Top Level) and ccTLD (Country Code Top Level).
 Second-Level Domain is the part `tryhackme` in `tryhackme.com`, while `.com` part is the TLD. SLD is limited to 63 characters + the TLD and can only use `a-z 0-9` and hyphens (not start or end with hyphens or have consecutive hyphens)
 
@@ -80,7 +80,7 @@ Subdomain sits on the left-hand side of the SLD using a period to separate it, i
 - TXT Record: Free text fields where any text-based data can be stored.
 
 ## Making a request
-![images](ex8.png)
+![images](data/ex8.png)
 
 - First, the computer checks its local cache to see if the address were previously looked up recently; if not, a request to Recursive DNS server will be made.
 - A Recursive DNS Server is usually provided by our ISP. This server also has a local cache of recently looked up domain names, If a result found, this is sent back to the computer, and our request ends here. If not, it starts with the internet's root DNS servers to find the right answers.
@@ -99,11 +99,11 @@ HTTPS (HTTP Secure) is the secure version of HTTP. Its data is encrypted in orde
 ## URL (Uniform Resource Locator)
 A URL is predominantly an instruction on how to access a resource on the internet.
 
-![images](ex9.png)
+![images](data/ex9.png)
 
 **Making a Request**: It's possible to make a request to a web server with just one line **GET / HTTP/1.1**
 
-![images](ex10.png)
+![images](data/ex10.png)
 
 **Example Request:**
 ```text
@@ -183,11 +183,11 @@ Headers are additional bits of data you can send to the web server when making r
 - **Content-Type**: Telling the client what type of data is being returned, i.e., HTML, CSS, Images, etc.
 - **Content-Encoding**: What method has been used to compress the data to make it smaller.
 ## Cookies
-![images](ex11.png)
+![images](data/ex11.png)
 
 Cookies can be used for many purposes but are most commonly used for website authentication. The cookie value is often a token (unique secret code that isn't easily humanly guessable).
 # How Websites Work
-![images](ex12.png)
+![images](data/ex12.png)
 
 There are two major components that make up a mistake:
 1. Front End (Client-Side) - the way your browser renders a website.
@@ -196,7 +196,7 @@ There are two major components that make up a mistake:
 ## HTML
 HyperText Markup Language (HTML) is the language websites are written in. Elements (also known as tags) are the building blocks of HTML pages and tells the browser how to display content.
 
-![images](ex13.png)
+![images](data/ex13.png)
 ## JavaScript
 JavaScript (JS) is used to control the functionality of web pages - without JS, a page would not have interactive elements and would always be static.
 
@@ -218,19 +218,19 @@ JavaScript (JS) is used to control the functionality of web pages - without JS, 
 ## Sensitive Data Exposure
 Sensitive Data Exposure occurs when a website doesn't properly protect (or remove) sensitive clear-text information to the end-user; usually found in a site's frontend source code.
 ## HTML Injection
-![images](ex14.png)
+![images](data/ex14.png)
 
 When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
 
 # Putting it all together
-![images](ex15.png)
+![images](data/ex15.png)
 
 When we request a website, our computer uses DNS to know the server's IP address. Then it talks to the web server using HTTP protocol; the webserver then returns HTML, JS, CSS, Images, etc., which our browser then uses to correctly format and display the website to you.
 
 ## Other components
 
 **Load Balancers**
-![images](ex16.png)
+![images](data/ex16.png)
 
 Providing two main features, ensuring high traffic websites can handle the load and providing a failover if a server becomes unresponsive.
 
@@ -249,7 +249,7 @@ Databases can range from just a simple plain text file up to complex clusters of
 **WAF (Web Application Firewall)**
 
 A WAF sits between your web request and the web server, protect the webserver from hacking or denial of service attacks. If a request is deemed a potential attack, it will be dropped and never be sent to the webserver.
-![images](ex17.png)
+![images](data/ex17.png)
 ## How Web Servers Work
 A web server is a software that listens for incoming connections and then utilises the HTTP protocol to deliver web content to its clients, i.e. Apache, Nginx, IIS, NodeJS, etc.
 
@@ -265,4 +265,4 @@ Some examples of these languages are PHP, Python, Ruby, NodeJS, Perl and many mo
 
 ## Summary the order of how a request to a website works
 
-![images](ex18.png)
+![images](data/ex18.png)
