@@ -266,3 +266,22 @@ Some examples of these languages are PHP, Python, Ruby, NodeJS, Perl and many mo
 ## Summary the order of how a request to a website works
 
 ![images](data/ex18.png)
+
+# Linux Fundamentals Part 1
+**Commands**
+- `echo`: Output any text that we provide.
+E.x: echo Hello
+E.x: echo "Hello Friend!"
+- `whoami`: Find out what user we're currently logged in as!.
+- `ls`: listing.
+- `cd`: change directory.
+- `cat`: concatenate.
+- `pwd`: print working directory.
+- `find`: find the address of a group of specific files.
+- `grep`: search the contents of files for specific values.
+
+**Symbol / Operator**
+- `&`: Run commands in the background of terminal.
+- `&&`: Combine multiple commands together in one line of your terminal.
+- `>`: This operator is a redirector, meaning we can take the output from a command and direct it somewhere.
+- `>>`: Does the same function of the > operator but appends the output rather than replacing.
