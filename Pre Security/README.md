@@ -4,13 +4,13 @@ I learned how to use gobuster to fuzz URLs, for example:
 `(base) ➜  workspace git:(main) ✗ gobuster dir -u https://www.kali.org/ -w rockyou.txt`
 
 # Defensive Security Intro
-I know some definitions about blue team like SOC, DFIR, malware,...
+I knew some definitions about blue team like SOC, DFIR, malware,...
 Also learn how to basically trace logs:
 
 `inspect alerts -> check IP malicious or not -> contact with responsible people -> if can, block that IP`
 
 # Careers in Cyber
-I know the learning path leads to each careers related to security.
+I knew the learning path leads to each careers related to security.
 
 # What is Networking?
 - Know private network and the networks connecting these small networks are called public networks -- or the Internet.
@@ -285,3 +285,9 @@ E.x: echo "Hello Friend!"
 - `&&`: Combine multiple commands together in one line of your terminal.
 - `>`: This operator is a redirector, meaning we can take the output from a command and direct it somewhere.
 - `>>`: Does the same function of the > operator but appends the output rather than replacing.
+# Windows Fundamentals 1
+I learnt basically about the GUI, New Technology File System (NTFS), the types of user accounts, User Account Control (UAC), the Control Panel and Task Manager.
+# Windows Fundamentals 2
+I knew about System Configuration (MSConfig) and how to use it effectively. Breakthrough some parts like changing UAC settings (UAC), Computer Managerment (compmgmt), System Information (msinfo32), Resource Monitor (resmon), Command Prompt (cmd), Register Editor (regedit).
+# Windows Fundamentals 3
+I covered several built-in Windows security tools that ship with the Windows OS to keep the device protected. In this session, I learnt about Windows Updates/Security, Virus & threat protection, Firewall & network protection, App & browser control (using Microsoft Defender SmartScreen), Device security, Bitlocker, Volume Shadow Copy Service (VSS)
